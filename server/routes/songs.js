@@ -19,10 +19,11 @@ router.get("/:q", async (req, res) => {
       .map((hit) => ({
         id: hit.result.id,
         title: hit.result.full_title,
+        artist_names: hit.result.artist_names,
         cover_art: hit.result.song_art_image_url,
       }));
 
-    res.status(200).json(songData);
+    res.status(200).json(response.data.response.hits);
   } catch (error) {
     console.log(error);
     res.status(401).json(error);
