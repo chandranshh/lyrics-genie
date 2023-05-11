@@ -1,0 +1,12 @@
+.searchbar-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name{
+    margin: 10px;
+}
+
+.artist-name{
+    margin: 10px;
+}
