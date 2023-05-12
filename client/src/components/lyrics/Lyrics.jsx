@@ -9,9 +9,9 @@ function Lyrics(props) {
     const title = props.song.title.split(" ");
     axios
       .get(
-        `http://localhost:3001/api/lyrics/${encodeURIComponent(
-          title[0]
-        )}/${encodeURIComponent(props.song.artist_names)}`
+        `/api/lyrics/${encodeURIComponent(title[0])}/${encodeURIComponent(
+          props.song.artist_names
+        )}`
       )
       .then((res) => {
         setLyrics(res.data.lyrics);

@@ -14,7 +14,7 @@ function Search() {
     if (trackName && artistName) {
       const data = `${trackName} ${artistName}`;
       axios
-        .get(`http://localhost:3001/api/songs/${encodeURIComponent(data)}`)
+        .get(`/api/songs/${encodeURIComponent(data)}`)
         .then((res) => {
           setSongData(res.data);
         })
