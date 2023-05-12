@@ -49,3 +49,56 @@
     background-color: #0c7cd5;
   }
   
+
+  @media (max-width: 768px) { /* For iPad Mini */
+
+    .song-card img {
+      flex: 3;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .song-card {
+      width: 320px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .detail-wrapper{
+      margin-left: 40px;
+      width: 200px !important;
+    }
+    
+    .song-card .detail-wrapper {
+      margin-left: 20px;
+      width: 500px !important;
+      text-align: left;
+    }
+    
+    .song-card .song-title {
+      flex: 5;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: grey;
+    }
+    
+    .song-card .song-artist {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      color: grey;
+    }
+    
+    .song-card button {
+      margin-bottom: 20px;
+      flex: 3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  

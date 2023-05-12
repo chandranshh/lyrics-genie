@@ -21,3 +21,21 @@
     text-align: center;
   }
   
+  @media (max-width: 768px) {
+    .lyrics-box {
+      margin-top: 50px;
+      background-color: #707070;
+      border: 1px solid #ccc;
+      color: rgb(238, 238, 238);
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      width: 350px;
+      max-width: 80%;
+      height: 20rem;
+      overflow: auto;
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
