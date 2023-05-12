@@ -1,11 +1,16 @@
 const router = require("express").Router();
 const dotenv = require("dotenv");
 const genius = require("genius-lyrics-api");
+const cors = require("cors");
+const express = require("express");
+const app = express();
+
+app.use(cors());
 
 dotenv.config();
 const access_token = process.env.ACCESS_TOKEN;
 
-router.get("lyrics/:title/:artist", async (req, res) => {
+router.get("/:title/:artist", async (req, res) => {
   try {
     const options = {
       apiKey: `${access_token}`,
