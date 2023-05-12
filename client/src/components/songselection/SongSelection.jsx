@@ -7,14 +7,12 @@ function SongSelection(props) {
   };
 
   return (
-    <div>
+    <div className="song-card">
       <img className="song-cover" src={props.data.cover_art} alt="" />
       <div className="detail-wrapper">
-        <span className="song-title">Song Name : {props.data.title}</span>
+        <span className="song-title">{props.data.title}</span>
         <br />
-        <span className="song-artist">
-          Artist Name : {props.data.artist_names}
-        </span>
+        <span className="song-artist">{props.data.artist_names}</span>
       </div>
       <button className={props.id} onClick={onClickHandler}>
         Select

@@ -1,4 +1,50 @@
-.song-cover{
-    width: 100px;
-    height: 100px;
-}
+.song-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+  }
+  
+  .detail-wrapper{
+    width: 500px !important;
+  }
+
+  .song-card img {
+    flex: 3;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .song-card .song-title {
+    flex: 5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: grey;
+  }
+  
+  .song-card .song-artist {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: grey;
+  }
+  
+  .song-card button {
+    background-color: #2196f3;
+    flex: 3;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .song-card button:hover {
+    background-color: #0c7cd5;
+  }
+  

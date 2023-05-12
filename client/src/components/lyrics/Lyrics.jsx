@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Lyrics.css";
 
 function Lyrics(props) {
   const [lyrics, setLyrics] = useState("");
@@ -20,7 +21,11 @@ function Lyrics(props) {
       });
   }, [props.song.title, props.song.artist_names]);
 
-  return <div>{lyrics}</div>;
+  return (
+    <div className="lyrics-container">
+      <div className="lyrics-box">{lyrics}</div>
+    </div>
+  );
 }
 
 export default Lyrics;

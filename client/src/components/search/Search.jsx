@@ -43,22 +43,28 @@ function Search() {
 
   return (
     <div className="searchbar-container">
-      <input
-        type="text"
-        className="track-name"
-        placeholder="Enter the track name"
-        value={trackName}
-        onChange={setTrackNameHandler}
-      />
-      <input
-        type="text"
-        className="artist-name"
-        placeholder="Enter the artist name"
-        value={artistName}
-        onChange={setArtistNameHandler}
-      />
-      <button onClick={makeRequest}>Search</button>
-
+      <div className="logo">
+        <span>Lyrics Genie</span>
+      </div>
+      <div className="input-container">
+        <input
+          type="text"
+          className="track-name"
+          placeholder="Enter the track name"
+          value={trackName}
+          onChange={setTrackNameHandler}
+        />
+        <input
+          type="text"
+          className="artist-name"
+          placeholder="Enter the artist name"
+          value={artistName}
+          onChange={setArtistNameHandler}
+        />
+        <button className="search-button" onClick={makeRequest}>
+          Search
+        </button>
+      </div>
       {songData &&
         songData.length > 0 &&
         songData.map((data, index) => (
@@ -68,7 +74,6 @@ function Search() {
             onSelect={onSelectSong}
           />
         ))}
-
       {selectedSong && <Lyrics song={selectedSong} />}
     </div>
   );
