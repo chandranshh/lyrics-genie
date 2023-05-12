@@ -23,7 +23,7 @@ function Lyrics(props) {
 
   return (
     <div className="lyrics-container">
-      <div className="lyrics-box">{lyrics}</div>
+      <pre className="lyrics-box">{lyrics}</pre>
     </div>
   );
 }

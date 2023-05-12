@@ -44,7 +44,7 @@ function Search() {
   return (
     <div className="searchbar-container">
       <div className="logo">
-        <span>Lyrics Genie</span>
+        <span className="logo-name">Lyrics Genie</span>
       </div>
       <div className="input-container">
         <input
@@ -65,7 +65,8 @@ function Search() {
           Search
         </button>
       </div>
-      {songData &&
+      {!selectedSong &&
+        songData &&
         songData.length > 0 &&
         songData.map((data, index) => (
           <SongSelection
