@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 import SongSelection from "../songselection/SongSelection.jsx";
+import Lyrics from "../lyrics/Lyrics.jsx";
 
-function Searchbar() {
+function Search() {
   const [trackName, setTrackName] = useState("");
   const [artistName, setArtistName] = useState("");
   const [songData, setSongData] = useState(null);
+  const [selectedSong, setSelectedSong] = useState(null);
 
   const makeRequest = () => {
     if (trackName && artistName) {
@@ -30,6 +32,10 @@ function Searchbar() {
     setArtistName(e.target.value);
   };
 
+  const onSelectSong = (song) => {
+    setSelectedSong(song);
+  };
+
   return (
     <div className="searchbar-container">
       <input
@@ -50,9 +56,17 @@ function Searchbar() {
 
       {songData &&
         songData.length > 0 &&
-        songData.map((data) => <SongSelection data={data} key={data.id} />)}
+        songData.map((data, index) => (
+          <SongSelection
+            data={data}
+            key={`song-${index}`}
+            onSelect={onSelectSong}
+          />
+        ))}
+
+      {selectedSong && <Lyrics song={selectedSong} />}
     </div>
   );
 }
 
-export default Searchbar;
+export default Search;
