@@ -12,6 +12,7 @@ function Search() {
 
   const makeRequest = () => {
     if (trackName && artistName) {
+      setSelectedSong("");
       const data = `${trackName} ${artistName}`;
       axios
         .get(
