@@ -20,6 +20,11 @@ function Search() {
         })
         .catch((error) => {
           console.log(error);
+        })
+        .finally(() => {
+          // Reset the input values
+          setTrackName("");
+          setArtistName("");
         });
     }
   };
