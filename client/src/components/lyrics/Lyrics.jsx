@@ -9,9 +9,9 @@ function Lyrics(props) {
     const title = props.song.title.split(" ");
     axios
       .get(
-        `/api/lyrics/${encodeURIComponent(title[0])}/${encodeURIComponent(
-          props.song.artist_names
-        )}`
+        `https://lyrics-genie-api.vercel.app/api/lyrics/${encodeURIComponent(
+          title[0]
+        )}/${encodeURIComponent(props.song.artist_names)}`
       )
       .then((res) => {
         setLyrics(res.data.lyrics);

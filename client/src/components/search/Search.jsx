@@ -14,7 +14,11 @@ function Search() {
     if (trackName && artistName) {
       const data = `${trackName} ${artistName}`;
       axios
-        .get(`/api/songs/${encodeURIComponent(data)}`)
+        .get(
+          `https://lyrics-genie-api.vercel.app/api/songs/${encodeURIComponent(
+            data
+          )}`
+        )
         .then((res) => {
           setSongData(res.data);
         })
