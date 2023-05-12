@@ -28,6 +28,25 @@
   color: #61dafb;
 }
 
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+  .love{
+    font-size: 2rem;
+    
+        color: #c967bf; background-image: -webkit-linear-gradient(0deg, #c967bf 25%, #ba825d 59%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+        
+      
+  }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

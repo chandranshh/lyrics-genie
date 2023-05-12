@@ -117,6 +117,20 @@
     text-align: center;
     white-space: pre-line;
   }
+
+  .footer{
+    max-width: 100vh;
+    margin-left: 610px;
+    margin-right: 80px;
+    color: white;
+  }
+    .love{
+      font-size: 2rem;
+      
+          color: #c967bf; background-image: -webkit-linear-gradient(0deg, #c967bf 25%, #ba825d 59%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+          
+        
+    }
   
 
   /* For devices with a maximum width of 414px (iPhone 14 portrait mode) */
@@ -183,6 +197,14 @@
   .lyrics {
     font-size: 1rem;
   }
+
+  .footer{
+    color: white;
+  }
+    .love{
+      font-size: 5rem;
+      color: #c967bf; background-image: -webkit-linear-gradient(0deg, #c967bf 25%, #ba825d 59%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+    }
 }
 
 /* For devices with a maximum width of 768px (iPad mini portrait mode) */
@@ -246,5 +268,13 @@
   
   .lyrics {
     font-size: 1.2rem;
+  }
+
+.footer{
+  color: white;
+}
+  .love{
+    font-size: 5rem;
+    color: #c967bf; background-image: -webkit-linear-gradient(0deg, #c967bf 25%, #ba825d 59%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
   }
 }
