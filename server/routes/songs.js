@@ -23,7 +23,7 @@ router.get("/:q", async (req, res) => {
         cover_art: hit.result.song_art_image_url,
       }));
 
-    res.status(200).json(response.data.response.hits);
+    res.status(200).json(songData);
   } catch (error) {
     console.log(error);
     res.status(401).json(error);

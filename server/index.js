@@ -7,6 +7,7 @@ const fetchSongs = require("./routes/songs.js");
 const fetchlyrics = require("./routes/lyrics.js");
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 app.use("/api/songs", fetchSongs);
