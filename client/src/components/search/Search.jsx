@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Searchbar.css";
+import "./Search.css";
+import SongSelection from "../songselection/SongSelection.jsx";
 
 function Searchbar() {
   const [trackName, setTrackName] = useState("");
   const [artistName, setArtistName] = useState("");
-  const [songData, setSongData] = useState({ message: "" });
+  const [songData, setSongData] = useState(null);
 
   const makeRequest = () => {
     if (trackName && artistName) {
@@ -46,7 +47,10 @@ function Searchbar() {
         onChange={setArtistNameHandler}
       />
       <button onClick={makeRequest}>Search</button>
-      {songData.message && <p>{songData.message}</p>}
+
+      {songData &&
+        songData.length > 0 &&
+        songData.map((data) => <SongSelection data={data} key={data.id} />)}
     </div>
   );
 }
